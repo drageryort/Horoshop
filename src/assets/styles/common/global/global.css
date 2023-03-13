@@ -1,0 +1,256 @@
+.bubble-enter-active {
+  transition: all 0.25s linear;
+}
+.bubble-enter-active.loader-wrapper {
+  transition: all 0.5s linear;
+}
+
+.bubble-leave-active.loader-wrapper {
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.bubble-enter-from {
+  opacity: 0;
+  transition: all 0.25s linear;
+}
+.bubble-enter-from.loader-wrapper {
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+
+.bubble-leave-to {
+  opacity: 0;
+}
+.bubble-leave-to.loader-wrapper {
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.animated-total, .animated-modal {
+  animation-duration: 2000ms;
+  animation-delay: 0ms;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.animate__fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "zabal_demo", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+*:after, *:before {
+  position: relative;
+}
+
+body {
+  color: var(--color-white);
+  background: var(--color-black);
+  overflow-x: hidden;
+}
+body.fixed {
+  overflow: hidden;
+}
+
+picture, .picture, video, .video {
+  display: block;
+  isolation: isolate;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button, .btn {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul, menu {
+  list-style: none;
+}
+
+input:focus {
+  outline: none;
+}
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: var(--color-white) !important;
+}
+
+.input-hidden {
+  position: absolute;
+  opacity: 0;
+  z-index: -5;
+}
+
+a, span {
+  display: inline-block;
+  text-decoration: unset;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+/*--------------------------------------------------------------
+# Colors
+--------------------------------------------------------------*/
+:root {
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gray: #D9D9D9;
+  --color-blue: #142DA9;
+  --color-light-blue: #2C4BE7;
+  --color-dark-blue: #092093;
+  --color-opacity-white: rgba(255, 255, 255, .5);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1110px;
+}
+.container.modal {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 1025px) {
+  .container {
+    max-width: 682px;
+  }
+}
+@media (max-width: 660px) {
+  .container {
+    max-width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (max-width: 330px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.hidden {
+  display: none;
+}
+
+.prevent {
+  pointer-events: none;
+}
+
+/* width */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.btn-blue {
+  display: block;
+  width: max-content;
+  padding: 20px 30px;
+  background: var(--color-blue);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  transition: background-color 0.5s, opacity 0.5s;
+}
+.btn-blue:hover {
+  background: var(--color-light-blue);
+}
+.btn-blue:active {
+  background: var(--color-dark-blue);
+}
+.btn-blue:disabled {
+  opacity: 0.3;
+}
+
+@media (max-width: 1000px) {
+  .btn-blue {
+    padding: 13px 24px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+.btn-white {
+  display: block;
+  width: max-content;
+  padding: 20px 30px;
+  background: var(--color-white);
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-blue);
+  transition: background-color 0.5s, opacity 0.5s;
+}
+.btn-white:disabled {
+  opacity: 0.3;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .btn-white {
+    padding: 13px 24px;
+    border-radius: 16px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */
