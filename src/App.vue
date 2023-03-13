@@ -1,29 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="layout">
+    <AppNavbar/>
+    <div class="layout-main">
+      <router-view/>
+    </div>
+  </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { defineComponent } from 'vue'
+import AppNavbar from '@/components/AppNavbar'
 
-nav {
-  padding: 30px;
+export default defineComponent({
+  name: 'commonLayout',
+  components: { AppNavbar }
+})
+</script>
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+<style lang="scss" scoped>
+@import './assets/styles/common/fonts/fonts.min.css';
+@import './assets/styles/common/global/global.min.css';
+.layout{
+  display: flex;
+  height: 100vh;
+  .layout-main{
+    width: calc(100% - 40px);
+    overflow-y: scroll;
+    >*{
+      min-height: 100%;
     }
   }
 }

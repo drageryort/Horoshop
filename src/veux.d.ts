@@ -3,7 +3,7 @@ import { Store } from 'vuex'
 declare module '@vue/runtime-core' {
   // declare your own store states
   interface State {
-    count: number
+    designCardsList: Array
   }
 
   // provide typings for `this.$store`
