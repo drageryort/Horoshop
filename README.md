@@ -1,4 +1,8 @@
 # horoshop
+Project build on Vue3 CLI + Vuex + Vue Router + TypeScript
+Project (Add/Edit page) need to be decomposed
+
+# horoshop
 
 ## Project setup
 ```
