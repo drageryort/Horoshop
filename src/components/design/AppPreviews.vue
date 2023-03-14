@@ -11,7 +11,7 @@
         <img :data-image="preview" src="@/assets/images/svg/delete_icon.svg" alt="remove_icon">
       </button>
     </div>
-    <label class="add_to_preview_list_block" @drop="dragImage">
+    <label class="add_to_preview_list_block btn" @drop="dragImage">
       <picture class="add_to_preview_list_picture">
         <img src="@/assets/images/svg/add_image_icon.svg" alt="add to preview list image">
       </picture>
